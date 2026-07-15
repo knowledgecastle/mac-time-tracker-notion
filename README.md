@@ -95,7 +95,7 @@ Open the app → **⚙️ Settings** → paste your **token** and the three **da
 Requires Swift (bundled with Xcode or the Command Line Tools) and macOS 14 (Sonoma) or later.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mac-time-tracker-notion.git
+git clone https://github.com/knowledgecastle/mac-time-tracker-notion.git
 cd mac-time-tracker-notion/TimeTracker
 swift build -c release
 ```
