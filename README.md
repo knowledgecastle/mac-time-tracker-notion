@@ -1,13 +1,8 @@
 # Mac Time Tracker for Notion
 
-A minimalist **macOS** time-tracking app (with a companion **Apple Watch** app) built in SwiftUI. Track time across your projects and tasks with a Notion-style database UI, and sync two-way with your own Notion workspace — pull in your projects & tasks, and write time entries back automatically when you stop a timer.
+A minimalist **macOS** time-tracking app built in SwiftUI. Track time across your projects and tasks with a Notion-style database UI, and sync two-way with your own Notion workspace — pull in your projects & tasks, and write time entries back automatically when you stop a timer.
 
 > **Bring your own Notion.** The app ships with **no data and no credentials**. You connect it to *your* Notion workspace by entering your integration token and database IDs in Settings (see [Notion setup](#notion-setup)).
-
-## Contents
-
-- [`TimeTracker/`](TimeTracker/) — the macOS app (main app)
-- [`TimeTrackerWatch/`](TimeTrackerWatch/) — a standalone Apple Watch app that talks to the same Notion databases
 
 ## Features
 
@@ -15,7 +10,6 @@ A minimalist **macOS** time-tracking app (with a companion **Apple Watch** app) 
 - 📁 Projects and tasks in a clean, Notion-style grouped/table UI (light + dark)
 - 📋 Time log grouped by day, plus a daily report
 - 🔄 **Two-way Notion sync** — imports your projects & tasks; writes a Time Entry back to Notion when you stop a timer
-- ⌚️ Optional Apple Watch app to start/stop timers from your wrist
 - 💾 Local-only projects & tasks are supported and never leave your Mac
 
 ## Install (macOS)
@@ -86,11 +80,9 @@ https://www.notion.so/workspace/<32-char-database-id>?v=...
 
 ### 4. Connect the app
 
-Open the app → **⚙️ Settings** → paste your **token** and the three **database IDs** → **Save** → **Sync Now**. On the Apple Watch app, open **Settings** (gear icon) and enter the same values.
+Open the app → **⚙️ Settings** → paste your **token** and the three **database IDs** → **Save** → **Sync Now**.
 
 ## Building
-
-### macOS app
 
 Requires Swift (bundled with Xcode or the Command Line Tools) and macOS 14 (Sonoma) or later.
 
@@ -102,13 +94,9 @@ swift build -c release
 
 Or open `TimeTracker/TimeTracker.xcodeproj` in Xcode and run the **TimeTracker** scheme.
 
-### Apple Watch app
-
-Open `TimeTrackerWatch/TimeTrackerWatch.xcodeproj` in Xcode, select the **TimeTrackerWatch** scheme and a watch (or simulator), and run. See [`TimeTrackerWatch/README.md`](TimeTrackerWatch/README.md).
-
 ## Privacy
 
-The app stores your Notion token and database IDs locally in macOS/watchOS `UserDefaults`, and talks directly to the Notion API from your device. Nothing is sent anywhere else. There is no analytics or telemetry.
+The app stores your Notion token and database IDs locally in macOS `UserDefaults`, and talks directly to the Notion API from your device. Nothing is sent anywhere else. There is no analytics or telemetry.
 
 ## License
 
