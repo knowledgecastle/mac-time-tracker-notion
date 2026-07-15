@@ -129,7 +129,7 @@ def make_icon(size):
         pixels.append(row)
     return pixels
 
-base = "/Users/imene/Claude AI/Time Tracking Swift/TimeTracker/Icon.iconset"
+base = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Icon.iconset")
 os.makedirs(base, exist_ok=True)
 
 sizes = [16, 32, 64, 128, 256, 512, 1024]
